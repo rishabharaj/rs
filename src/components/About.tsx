@@ -27,8 +27,8 @@ const About = () => {
 
   const stats = [
     { number: "4+", label: "Hackathon Achievements" },
-    { number: "95%", label: "Client Satisfaction" },
-    { number: "2+", label: "Years Experience" }
+    { number: "15+", label: "Open Source Contributions" },
+    { number: "2+", label: "Years Learning & Building" }
   ];
 
   return (
