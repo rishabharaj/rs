@@ -8,6 +8,7 @@ type RevealProps = {
   direction?: 'up' | 'down' | 'left' | 'right';
   once?: boolean;
   className?: string;
+  duration?: number; // ms animation duration
 };
 
 const Reveal: React.FC<RevealProps> = ({
@@ -18,6 +19,7 @@ const Reveal: React.FC<RevealProps> = ({
   direction = 'up',
   once = true,
   className,
+  duration = 800,
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -64,7 +66,7 @@ const Reveal: React.FC<RevealProps> = ({
               : direction === 'left'
                 ? `translateX(${x}px)`
                 : `translateX(-${x}px)`,
-  transition: `opacity 800ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms, transform 800ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
+  transition: `opacity ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
         willChange: "opacity, transform",
       }}
     >

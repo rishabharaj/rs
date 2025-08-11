@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <Reveal direction="left" x={40}>
+            <Reveal direction="left" x={40} duration={1500}>
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl lg:text-5xl font-bold text-foreground">Hello world<span className="text-coral">.</span></h2>
@@ -90,7 +90,7 @@ const Hero = () => {
             </Reveal>
 
             {/* Right Content - Profile Image */}
-            <Reveal direction="right" x={40}>
+            <Reveal direction="right" x={40} duration={1500}>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 {/* Profile Image Container */}
