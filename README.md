@@ -1,73 +1,95 @@
-# Welcome to your Rishabh project
+## Rishabharaj Sharma — Developer Portfolio
 
-## Project info
+A fast, modern portfolio built with Vite + React + TypeScript + Tailwind CSS. It showcases projects, experience, certifications, a photo gallery, and smooth in‑view animations with a neon scroll progress bar.
 
-**URL**: https://lovable.dev/projects/61a55b0f-7275-4600-a7e7-7776f3a219b2
+## Features
 
-## How can I edit this code?
+- Vite + React + TypeScript
+- Tailwind CSS with custom tokens and utilities
+- Smooth in‑view Reveal animations (IntersectionObserver)
+- Neon gradient top scroll progress bar
+- Hero with glowing concentric rings behind the profile image
+- Projects, Experience (timeline), Certifications, Skills, Gallery, Contact
+- Accessible, responsive, and keyboard friendly
 
-There are several ways of editing your application.
+## Getting started
 
-**Use Rishabh**
+Prerequisites: Node.js 18+ (or 20+ recommended).
 
-Simply visit the [Rishabh Project](https://rishabh.dev/projects/61a55b0f-7275-4600-a7e7-7776f3a219b2) and start prompting.
+Install dependencies and start the dev server:
 
-Changes made via Rishabh will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Rishabh.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## Scripts
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `npm run dev` — start Vite dev server
+- `npm run build` — production build
+- `npm run build:dev` — development-mode build
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint
 
-## What technologies are used for this project?
+## Project structure
 
-This project is built with:
+```
+src/
+	components/
+		About.tsx
+		Certifications.tsx
+		Contact.tsx
+		Experience.tsx
+		Footer.tsx
+		Gallery.tsx
+		Header.tsx
+		Hero.tsx
+		Projects.tsx
+		ScrollProgress.tsx
+		Skills.tsx
+		ui/Reveal.tsx
+	pages/
+		Index.tsx
+	assets/
+	hooks/
+	lib/
+public/
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Styling
 
-## How can I deploy this project?
+Tailwind is configured in `tailwind.config.ts`, with supporting styles in `src/index.css`. A reusable `.section-headline` utility adds a coral heading color and a subtle dark text shadow.
 
-Simply open [Rishabh](https://rishabh.dev/projects/61a55b0f-7275-4600-a7e7-7776f3a219b2) and click on Share -> Publish.
+## Custom components
 
-## Can I connect a custom domain to my Rishabh project?
+- `ui/Reveal.tsx` — intersection‑observer based reveal with direction (up/down/left/right), delay, and reduced‑motion support.
+- `ScrollProgress.tsx` — animated neon scroll progress bar fixed at the top.
 
-Yes, you can!
+## Deploy
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can deploy the `dist/` folder to any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
 
-Read more here: [Setting up a custom domain](https://docs.rishabh.dev/tips-tricks/custom-domain#step-by-step-guide)
+For GitHub Pages (classic flow):
+
+```bash
+npm run build
+# push the dist folder to the gh-pages branch using your preferred tool
+```
+
+## Credits
+
+- Icons: lucide‑react
+- UI primitives: Radix UI
+- Animations/utilities: Tailwind CSS
+
+## License
+
+This repository is for personal portfolio use. If you fork it, please keep attribution and replace personal assets with your own.
+
