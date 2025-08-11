@@ -1,5 +1,11 @@
 import { ExternalLink, Github } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
+// Bundle project images
+import imgDrishti from '../../images/projects/Drishti.png';
+import imgAgentSync from '../../images/projects/Agentsync.png';
+import imgStockSaarthi from '../../images/projects/stocksaarthi.png';
+import imgIndoreConnect from '../../images/projects/indoreconnect2.png';
+import imgBasicProjects from '../../images/projects/Basicproject.png';
 
 const Projects = () => {
   const projects = [
@@ -7,7 +13,7 @@ const Projects = () => {
       title: "Project Drishti",
       description: "Uses AI and geospatial data to detect illegal construction and support smart city development in Indore.",
       tags: ["AI/ML", "Geospatial", "Smart City", "Computer Vision"],
-      image: "/images/projects/Drishti.png",
+  image: imgDrishti,
       demo: "https://project-drishti-interactive-proposa.vercel.app/",
       github: "https://github.com/rishabharaj/Project-Drishti---Interactive-Proposal",
       featured: true
@@ -16,7 +22,7 @@ const Projects = () => {
       title: "AgentSync",
       description: "A modern AI agent management platform that allows users to interact with various specialized AI agents for different tasks.",
       tags: ["AI/ML", "React", "TypeScript", "API Integration"],
-      image: "/images/projects/Agentsync.png",
+  image: imgAgentSync,
       demo: "https://v0-full-stack-ai-website.vercel.app/",
       github: "https://github.com/rishabharaj/AgentSync",
       featured: true
@@ -25,7 +31,7 @@ const Projects = () => {
       title: "Stock Saarthi",
       description: "A project focused on converting stocks into tokenized stocks & integrated with MetaMask crypto-wallet.",
       tags: ["React", "Web3", "MetaMask", "Blockchain"],
-      image: "/images/projects/stocksaarthi.png",
+  image: imgStockSaarthi,
       demo: "https://rishabharaj.github.io/tokenized-stock-saarthi-/",
       github: "https://github.com/rishabharaj/tokenized-stock-saarthi-",
       featured: true
@@ -34,7 +40,7 @@ const Projects = () => {
       title: "Indore Connect 2.0",
       description: "A modern civic tech platform designed to streamline grievance redressal for Indore city.",
       tags: ["Civic Tech", "React", "Government", "Public Service"],
-      image: "/images/projects/indoreconnect2.png",
+  image: imgIndoreConnect,
       demo: "https://indore-connect-2-0-jansunwai.vercel.app/",
       github: "https://github.com/rishabharaj/Indore-Connect-2.0---Jansunwai",
       featured: false
@@ -43,7 +49,7 @@ const Projects = () => {
       title: "Basic Projects Collection",
       description: "A collection of small and simple projects built using JavaScript, HTML, CSS, and Python.",
       tags: ["JavaScript", "HTML", "CSS", "Python"],
-      image: "/images/projects/Basicproject.png",
+  image: imgBasicProjects,
       demo: "https://rishabharaj.github.io/basic-projects/",
       github: "https://github.com/rishabharaj/basic-projects",
       featured: false

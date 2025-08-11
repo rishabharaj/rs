@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import Reveal from '@/components/ui/Reveal';
 import { Award, ExternalLink } from 'lucide-react';
+// Bundle certificate images so they work after deployment (instead of relying on public/)
+import certFrontend from '../../images/certificates/CourseraFrontend.png';
+import certAppian from '../../images/certificates/appianAIML.png';
+import certGenAI from '../../images/certificates/Coursera-GenAI.png';
+import certKali from '../../images/certificates/kali-linux.png';
+import certIlove from '../../images/certificates/IloveHackthon.jpg';
+import certSupervised from '../../images/certificates/Coursera 0TJJCYCMJH7S_page-0001.png';
 
 const Certifications = () => {
   const [selectedCert, setSelectedCert] = useState<string | null>(null);
@@ -11,7 +18,7 @@ const Certifications = () => {
       title: "Introduction to Front-End Development",
       issuer: "Meta (Coursera)",
       date: "2024",
-      image: "/images/certificates/CourseraFrontend.png",
+  image: certFrontend,
       description: "Meta Front-End Development Professional Certificate program",
       credentialUrl: "#"
     },
@@ -20,7 +27,7 @@ const Certifications = () => {
       title: "Appian AI Application Challenge",
       issuer: "IIT Madras",
       date: "2025",
-      image: "/images/certificates/appianAIML.png",
+  image: certAppian,
       description: "Finalist certification from Shaastra 2025 hackathon",
       credentialUrl: "#"
     },
@@ -29,7 +36,7 @@ const Certifications = () => {
       title: "Generative AI",
       issuer: "Coursera-Deeplearning.AI",
       date: "2024",
-      image: "/images/certificates/Coursera-GenAI.png",
+  image: certGenAI,
       description: "Comprehensive course on Generative AI and machine learning",
       credentialUrl: "#"
     },
@@ -38,7 +45,7 @@ const Certifications = () => {
       title: "Kali Linux Tools",
       issuer: "Udemy",
       date: "2024",
-      image: "/images/certificates/kali-linux.png",
+  image: certKali,
       description: "Cybersecurity and penetration testing with Kali Linux",
       credentialUrl: "#"
     },
@@ -47,7 +54,7 @@ const Certifications = () => {
       title: "ilovehackathon Web3 Blockchain",
       issuer: "ilovehackathon",
       date: "2024",
-      image: "/images/certificates/IloveHackthon.jpg",
+  image: certIlove,
       description: "1st place winner certification in Web3 & Blockchain hackathon",
       credentialUrl: "#"
     },
@@ -56,7 +63,7 @@ const Certifications = () => {
       title: "Supervised ML: Regression and Classification",
       issuer: "Coursera-Deeplearning.AI",
       date: "2024",
-      image: "/images/certificates/Coursera 0TJJCYCMJH7S_page-0001.png",
+  image: certSupervised,
       description: "Machine learning specialization focusing on supervised learning",
       credentialUrl: "#"
     }
