@@ -17,7 +17,7 @@ const Certifications = () => {
       id: 1,
       title: "Introduction to Front-End Development",
       issuer: "Meta (Coursera)",
-      date: "2024",
+      date: "JAN-2025",
   image: certFrontend,
       description: "Meta Front-End Development Professional Certificate program",
       credentialUrl: "#"
@@ -26,7 +26,7 @@ const Certifications = () => {
       id: 2,
       title: "Appian AI Application Challenge",
       issuer: "IIT Madras",
-      date: "2025",
+      date: "JAN-2025",
   image: certAppian,
       description: "Finalist certification from Shaastra 2025 hackathon",
       credentialUrl: "#"
@@ -35,7 +35,7 @@ const Certifications = () => {
       id: 3,
       title: "Generative AI",
       issuer: "Coursera-Deeplearning.AI",
-      date: "2024",
+      date: "FEB-2025",
   image: certGenAI,
       description: "Comprehensive course on Generative AI and machine learning",
       credentialUrl: "#"
@@ -44,7 +44,7 @@ const Certifications = () => {
       id: 4,
       title: "Kali Linux Tools",
       issuer: "Udemy",
-      date: "2024",
+      date: "MAY-2025",
   image: certKali,
       description: "Cybersecurity and penetration testing with Kali Linux",
       credentialUrl: "#"
@@ -53,16 +53,16 @@ const Certifications = () => {
       id: 5,
       title: "ilovehackathon Web3 Blockchain",
       issuer: "ilovehackathon",
-      date: "2024",
+      date: "DEC-2024",
   image: certIlove,
-      description: "1st place winner certification in Web3 & Blockchain hackathon",
+      description: "winner certification in Web3 & Blockchain hackathon",
       credentialUrl: "#"
     },
     {
       id: 6,
       title: "Supervised ML: Regression and Classification",
       issuer: "Coursera-Deeplearning.AI",
-      date: "2024",
+      date: "JUN-2025",
   image: certSupervised,
       description: "Machine learning specialization focusing on supervised learning",
       credentialUrl: "#"
