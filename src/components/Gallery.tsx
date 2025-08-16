@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Reveal from '@/components/ui/Reveal';
 // Local gallery images
 import chennaiPhoto from '../../images/gallary/Chennai photo.jpg';
@@ -9,6 +10,20 @@ import treasureInShell from '../../images/gallary/treasure in shell event (linux
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Lock scroll without shifting layout; keep modal always centered
+  useEffect(() => {
+    if (selectedImage) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+  }, [selectedImage]);
 
   const galleryImages = [
     // User-provided photos
@@ -120,25 +135,32 @@ const Gallery = () => {
         </div>
 
         {/* Modal */}
-        {selectedImage && (
-          <div 
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+        {selectedImage && typeof document !== 'undefined' && createPortal(
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
             onClick={() => setSelectedImage(null)}
           >
-            <div className="relative max-w-4xl max-h-full">
-              <img 
-                src={selectedImage} 
+            <div
+              className="relative w-[820px] max-w-[92vw] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10 animate-in fade-in zoom-in duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
                 alt="Gallery Image"
-                className="max-w-full max-h-full object-contain rounded-lg"
+                className="w-full h-full object-cover object-center select-none"
+                draggable={false}
               />
-              <button 
+              <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 text-white text-2xl hover:text-coral transition-colors"
+                className="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white text-xl leading-none backdrop-blur hover:bg-black/80 transition-colors"
+                aria-label="Close"
               >
                 ×
               </button>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </section>

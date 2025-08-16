@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Reveal from '@/components/ui/Reveal';
 import { Award, ExternalLink } from 'lucide-react';
 // Bundle certificate images so they work after deployment (instead of relying on public/)
@@ -11,6 +12,18 @@ import certSupervised from '../../images/certificates/Coursera 0TJJCYCMJH7S_page
 
 const Certifications = () => {
   const [selectedCert, setSelectedCert] = useState<string | null>(null);
+
+  // Lock scroll when certificate modal open
+  useEffect(() => {
+    if (selectedCert) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+  }, [selectedCert]);
 
   const certifications = [
     {
@@ -115,26 +128,33 @@ const Certifications = () => {
           ))}
         </div>
 
-        {/* Modal */}
-        {selectedCert && (
-          <div 
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+        {/* Modal via portal */}
+        {selectedCert && typeof document !== 'undefined' && createPortal(
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
             onClick={() => setSelectedCert(null)}
           >
-            <div className="relative max-w-4xl max-h-full">
-              <img 
-                src={selectedCert} 
+            <div
+              className="relative w-[900px] max-w-[95vw] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10 animate-in fade-in zoom-in duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedCert}
                 alt="Certificate"
-                className="max-w-full max-h-full object-contain rounded-lg"
+                className="w-full h-full object-contain bg-[#111] select-none"
+                draggable={false}
               />
-              <button 
+              <button
                 onClick={() => setSelectedCert(null)}
-                className="absolute top-4 right-4 text-white text-2xl hover:text-coral transition-colors"
+                className="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white text-xl leading-none backdrop-blur hover:bg-black/80 transition-colors"
+                aria-label="Close"
               >
                 ×
               </button>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </section>

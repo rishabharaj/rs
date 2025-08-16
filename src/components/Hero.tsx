@@ -93,26 +93,25 @@ const Hero = () => {
             <Reveal direction="right" x={40} duration={1500}>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                {/* Profile Image Container */}
-                <div className="relative w-[440px] h-[540px] flex items-end justify-center">
-                  {/* Dark radial background for contrast */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full bg-gradient-to-b from-[#181b20] via-[#181b20] to-transparent z-0"></div>
-                  {/* Outer Ring */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full border-[10px] border-[#ff5a36] opacity-50 z-10 shadow-[0_0_60px_10px_rgba(255,90,54,0.25)]"></div>
-                  {/* Inner Ring */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] rounded-full border-[5px] border-[#ff5a36] opacity-40 z-10"></div>
-                  {/* Profile Image overlapping bottom of rings */}
+                {/* Profile Image Container (responsive) */}
+                <div className="relative w-[280px] h-[360px] sm:w-[340px] sm:h-[440px] md:w-[380px] md:h-[500px] lg:w-[460px] lg:h-[560px] flex items-end justify-center">
+                  {/* Dark radial background (bigger) */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[270px] h-[270px] sm:w-[330px] sm:h-[330px] md:w-[390px] md:h-[390px] lg:w-[450px] lg:h-[450px] rounded-full bg-gradient-to-b from-[#181b20] via-[#181b20] to-transparent z-0"></div>
+                  {/* Outer Ring (bigger) */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] sm:w-[290px] sm:h-[290px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full border-[8px] md:border-[9px] lg:border-[10px] border-[#ff5a36] opacity-50 z-10 shadow-[0_0_60px_12px_rgba(255,90,54,0.28)]"></div>
+                  {/* Inner Ring (bigger) */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[195px] h-[195px] sm:w-[220px] sm:h-[220px] md:w-[265px] md:h-[265px] lg:w-[305px] lg:h-[305px] rounded-full border-[4px] md:border-[5px] border-[#ff5a36] opacity-40 z-10"></div>
+                  {/* Profile Image (responsive) */}
                   <img
                     src={profilePhoto}
                     alt="Rishabharaj Sharma - Software Developer"
-                    className="relative z-20 w-[340px] h-[440px] object-cover rounded-2xl shadow-xl mb-20"
-                    style={{ marginTop: '120px' }} // pushes image down to overlap rings
+                    className="relative z-20 w-[220px] h-[300px] sm:w-[250px] sm:h-[340px] md:w-[300px] md:h-[400px] lg:w-[340px] lg:h-[440px] object-cover rounded-2xl shadow-xl mb-14 sm:mb-16 md:mb-20 mt-10 sm:mt-12 md:mt-16 lg:mt-[120px]"
                   />
                 </div>
 
-                {/* Side chevrons */}
-                <div className="absolute -left-6 top-1/2 -translate-y-1/2 text-coral text-6xl font-bold opacity-40 select-none">&lt;</div>
-                <div className="absolute -right-6 top-1/2 -translate-y-1/2 text-coral text-6xl font-bold opacity-40 select-none">&gt;</div>
+                {/* Side chevrons (hidden on very small screens to save space) */}
+                <div className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 text-coral text-5xl sm:text-6xl font-bold opacity-30 sm:opacity-40 select-none pointer-events-none">&lt;</div>
+                <div className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 text-coral text-5xl sm:text-6xl font-bold opacity-30 sm:opacity-40 select-none pointer-events-none">&gt;</div>
               </div>
             </div>
             </Reveal>
