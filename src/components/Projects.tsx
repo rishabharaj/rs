@@ -10,12 +10,12 @@ import imgBasicProjects from '../../images/projects/Basicproject.png';
 const Projects = () => {
   const projects = [
     {
-      title: "Project Drishti",
-      description: "Uses AI and geospatial data to detect illegal construction and support smart city development in Indore.",
-      tags: ["AI/ML", "Geospatial", "Smart City", "Computer Vision"],
+      title: "Cortex",
+      description: "Cortex : An AI-driven second brain that turns your scattered thoughts into connected insights",
+      tags: ["AI/ML", "Neural Networks", "Deep Learning", "Computer Vision"],
   image: imgDrishti,
-      demo: "https://project-drishti-interactive-proposa.vercel.app/",
-      github: "https://github.com/rishabharaj/Project-Drishti---Interactive-Proposal",
+      demo: "https://cortex-personal-ai-engine.vercel.app/",
+      github: "https://github.com/rishabharaj/Cortex-Personal-AI-Engine",
       featured: true
     },
     {
