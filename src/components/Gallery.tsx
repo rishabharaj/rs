@@ -85,14 +85,14 @@ const Gallery = () => {
       src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=400&fit=crop",
       alt: "Team Collaboration",
       title: "Team Projects",
-      description: "Collaborative development work"
+      description: "Collaborative development work : coming soon"
     },
     {
       id: 6,
       src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop",
       alt: "Project Presentation",
       title: "Project Demo",
-      description: "Showcasing technical solutions"
+      description: "Showcasing : coming soon"
     }
   ];
 
