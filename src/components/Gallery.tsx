@@ -6,6 +6,7 @@ import chennaiPhoto from '../../images/gallary/Chennai photo.jpg';
 import duaaPhoto from '../../images/gallary/DUAA_PHOTO.jpg';
 import iloveHackathon from '../../images/gallary/iloveindoreWinning_photo.png';
 import diabloClub from '../../images/gallary/diablo club indore.jpg';
+import youthFest from '../../images/gallary/Youthfest.jpg';
 import treasureInShell from '../../images/gallary/treasure in shell event (linux) coordinating volunteering.jpg';
 
 const Gallery = () => {
@@ -30,47 +31,47 @@ const Gallery = () => {
     {
       id: 101,
       src: chennaiPhoto,
-      alt: "Finalist at IIT Chennai Hackathon (APPIAN AI CHALLENGE)",
-      title: "IIT Chennai Hackathon Finalist",
-      description: "APPIAN AI Challenge — Finalist at IIT Madras (Chennai)"
+      alt: "Finalist at IIT Madras Hackathon (APPIAN AI CHALLENGE)",
+      title: "IIT Madras Hackathon Finalist ",
+      description: "APPIAN AI Challenge — Finalist at IIT Madras (Chennai) JAN-2025"
     },
     {
       id: 102,
-      src: duaaPhoto,
-      alt: "Organizing the DAVV State-Level Youth Fest",
-      title: "DAVV State-Level Youth Fest",
-      description: "Organizing the DUAA State-Level Youth Fest"
-    },
-    {
-      id: 103,
       src: iloveHackathon,
       alt: "Winning the I Love Hackathon with Stock Saarthi project",
       title: "I Love Hackathon Winner",
-      description: "Winning the I Love Hackathon with Stock Saarthi project"
+      description: "Winning the I Love Hackathon with Stock Saarthi project NOV-2024"
+    },
+    {
+      id: 103,
+      src: duaaPhoto,
+      alt: "Organizing the DAVV State-Level Youth Fest",
+      title: "DAVV State-Level Youth Fest",
+      description: "Organizing the DUAA State-Level Youth Fest FEB-2025"
     },
     {
       id: 104,
-      src: diabloClub,
-      alt: "Freshers get together at Diablo Club, Indore (Nov 2023)",
-      title: "Diablo Club Indore",
-      description: "Freshers get together — November 2023"
+      src: youthFest,
+      title: "Yuvaan at DAVV",
+      alt: "Volunteer at MP Youth Festival ",
+      description: "Volunteer | MP Youth Festival FEB-2025"
     },
     {
       id: 105,
       src: treasureInShell,
       alt: "Linux terminal game-themed event, coordinating & volunteering",
       title: "GDG Event: Treasure in the Shell",
-      description: "Linux terminal game- themed event, coordinating & volunteering"
+      description: "Linux terminal game- themed event, coordinating & volunteering AUG-2025"
+    },
+    {
+      id: 106,
+      src: diabloClub,
+      alt: "Freshers get together at Diablo Club, Indore (Nov 2023)",
+      title: "Diablo Club Indore",
+      description: "Freshers get together — November 2023"
     },
    
   
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&h=400&fit=crop",
-      alt: "Tech Conference",
-      title: "Technology Summit",
-      description: "Presenting innovative solutions"
-    },
     {
       id: 4,
       src: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=500&h=400&fit=crop",
