@@ -15,7 +15,7 @@ const Experience = () => {
       icon: <Trophy className="w-6 h-6 text-coral" />,
       title: "Hackathons & Competitions",
       company: "Winner & Finalist",
-      period: "2024-2025",
+      period: "DEC-2024",
       description: "1st prize of $300 in ilovehackathon (Web3 & Blockchain) in December 2024. Finalist in Appian AI Application Challenge - Shaastra 2025 at IIT Madras. These experiences honed my skills in rapid prototyping and problem-solving under pressure.",
       achievements: ["$300 Prize Winner", "IIT Madras Finalist", "Web3 & Blockchain", "AI Applications"]
     },

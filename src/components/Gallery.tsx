@@ -41,7 +41,7 @@ const Gallery = () => {
       src: iloveHackathon,
       alt: "Winning the I Love Hackathon with Stock Saarthi project",
       title: "I Love Hackathon Winner",
-      description: "Winning the I Love Hackathon with Stock Saarthi project NOV-2024"
+      description: "Winning the I Love Hackathon with Stock Saarthi project DEC-2024"
     },
     {
       id: 103,
@@ -70,14 +70,14 @@ const Gallery = () => {
       src: kriyeta,
       alt: "Krityeta 4.0 certification img",
       title: "Kriyeta 4.0 at Acropolise ,Indore",
-      description: "Built a Multiagent system during Kriyeta 4.0, a 48-hour offline hackathon at Acropolis, Indore. APR-2025"
+      description: "Built a Multiagent system during Kriyeta 4.0, a 48-hour offline hackathon at Acropolis, Indore.  APR-2025"
     },
     {
       id: 107,
       src: diabloClub,
       alt: "Freshers get together at Diablo Club, Indore (Nov 2023)",
       title: "Diablo Club Indore",
-      description: "Freshers get together — November 2023"
+      description: "Freshers get together —-  NOV-2023"
     },
    
     {
