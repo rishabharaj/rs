@@ -91,5 +91,11 @@ npm run build
 
 ## License
 
-This repository is for personal portfolio use. If you fork it, please keep attribution and replace personal assets with your own.
+Code is released under the MIT License – see the `LICENSE` file.
+
+Personal media assets (all files under `images/` and `src/assets/` such as photos, certificates, and project screenshots) are NOT covered by the MIT license. Please replace them with your own when forking or deploying publicly. Keep attribution (link back or name credit) somewhere in the project if you reuse the code structure/design.
+
+---
+
+Made with ❤️ by [Rishabharaj Sharma](https://github.com/rishabharaj)
 
