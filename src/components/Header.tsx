@@ -34,12 +34,12 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
+    <header
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 h-16 flex items-center ${
+        isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border supports-[backdrop-filter]:bg-background/60' : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-6 w-full">
         <div className="flex items-center justify-between">
           <Reveal direction="down" y={16}>
             <div className="text-xl font-bold text-foreground">
@@ -72,7 +72,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border supports-[backdrop-filter]:bg-background/75">
             <div className="container mx-auto px-6 py-4 space-y-4">
               {menuItems.map((item) => (
                 <button
