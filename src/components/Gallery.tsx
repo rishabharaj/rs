@@ -7,6 +7,7 @@ import duaaPhoto from '../../images/gallary/DUAA_PHOTO.jpg';
 import iloveHackathon from '../../images/gallary/iloveindoreWinning_photo.png';
 import diabloClub from '../../images/gallary/diablo club indore.jpg';
 import youthFest from '../../images/gallary/Youthfest.jpg';
+import kriyeta from '../../images/gallary/kriyeta4.jpeg';
 import treasureInShell from '../../images/gallary/treasure in shell event (linux) coordinating volunteering.jpg';
 
 const Gallery = () => {
@@ -63,22 +64,22 @@ const Gallery = () => {
       title: "GDG Event: Treasure in the Shell",
       description: "Linux terminal game- themed event, coordinating & volunteering AUG-2025"
     },
+    
     {
-      id: 106,
+      id: 105,
+      src: kriyeta,
+      alt: "Krityeta 4.0 certification img",
+      title: "Kriyeta 4.0 at Acropolise ,Indore",
+      description: "Built a Multiagent system during Kriyeta 4.0, a 48-hour offline hackathon at Acropolis, Indore. APR-2025"
+    },
+    {
+      id: 107,
       src: diabloClub,
       alt: "Freshers get together at Diablo Club, Indore (Nov 2023)",
       title: "Diablo Club Indore",
       description: "Freshers get together — November 2023"
     },
    
-  
-    {
-      id: 4,
-      src: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=500&h=400&fit=crop",
-      alt: "Coding Workshop",
-      title: "Development Workshop",
-      description: "Leading coding sessions"
-    },
     {
       id: 5,
       src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=400&fit=crop",

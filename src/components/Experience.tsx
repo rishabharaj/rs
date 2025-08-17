@@ -1,4 +1,4 @@
-import { Trophy, Phone, Monitor, TrendingUp } from 'lucide-react';
+import { Trophy, Phone, Monitor, TrendingUp, Brain } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 
 const Experience = () => {
@@ -12,13 +12,14 @@ const Experience = () => {
       achievements: ["$300 Prize Winner", "IIT Madras Finalist", "Web3 & Blockchain", "AI Applications"]
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-coral" />,
-      title: "Trading & Automation Projects",
-      company: "Personal Projects",
-      period: "Ongoing",
-      description: "Manually trade BankNifty options and developing a semi-automated trade analysis system using Python. Built backtesting scripts and integrated with multiple trading APIs including KiteConnect, Dhan, and Kotak Neo.",
-      achievements: ["Python Automation", "API Integration", "Backtesting Systems", "Options Trading"]
+      icon: <Brain className="w-6 h-6 text-coral" />,
+      title: "AI/ML Internship ",
+      company: "AIML Lab, IET DAVV Indore",
+      period: "Sep 2025 - Nov 2024",
+      description: "3-month internship at the AIML Lab (IET DAVV) focusing on algorithmic trading research and applied machine learning. Built and evaluated models for options / index movement signals, integrated feature engineering pipelines, and experimented with backtesting frameworks to optimize strategy performance  and integrated with multiple trading APIs including KiteConnect, Dhan, and Kotak Neo.",
+      achievements: ["Algorithmic Trading", "AI/ML Research", "API Integration", "Model Backtesting", "Python Automation"]
     },
+
     {
       icon: <Phone className="w-6 h-6 text-coral" />,
       title: "Call Support Assistant",
