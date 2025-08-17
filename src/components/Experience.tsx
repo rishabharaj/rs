@@ -1,8 +1,16 @@
-import { Trophy, Phone, Monitor, TrendingUp, Brain } from 'lucide-react';
+import { Trophy, Phone, Monitor, TrendingUp, Brain, Users } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 
 const Experience = () => {
   const experiences = [
+    {
+      icon: <Users className="w-6 h-6 text-coral" />,
+      title: "Core Member – GDG On Campus (IET DAVV)",
+      company: "Formerly GDSC",
+      period: "Feb 2025 - Present",
+      description: "Contributing as part of the technical & operations team: planning and executing tech events, workshops, and community sessions. Assist with technical setups (AV, code/demo environments), coordinate and drive community engagement & onboarding initiatives.",
+      achievements: ["Community Events", "Workshops", "Technical Operations", "Engagement"]
+    },
     {
       icon: <Trophy className="w-6 h-6 text-coral" />,
       title: "Hackathons & Competitions",
@@ -15,8 +23,8 @@ const Experience = () => {
       icon: <Brain className="w-6 h-6 text-coral" />,
       title: "AI/ML Internship ",
       company: "AIML Lab, IET DAVV Indore",
-      period: "Sep 2025 - Nov 2024",
-      description: "3-month internship at the AIML Lab (IET DAVV) focusing on algorithmic trading research and applied machine learning. Built and evaluated models for options / index movement signals, integrated feature engineering pipelines, and experimented with backtesting frameworks to optimize strategy performance  and integrated with multiple trading APIs including KiteConnect, Dhan, and Kotak Neo.",
+      period: "Sep 2024 - Nov 2024",
+      description: "3-month internship at the AIML Lab (IET DAVV) focusing on algorithmic trading research and applied machine learning. Built and evaluated models for options / index movement signals, integrated feature engineering pipelines, and experimented with backtesting frameworks to optimize strategy performance and integrated with multiple trading APIs including KiteConnect, Dhan, and Kotak Neo.",
       achievements: ["Algorithmic Trading", "AI/ML Research", "API Integration", "Model Backtesting", "Python Automation"]
     },
 
