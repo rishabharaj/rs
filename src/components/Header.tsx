@@ -26,11 +26,23 @@ const Header = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+    const element = document.querySelector(href) as HTMLElement | null;
+    if (!element) return;
+    setIsMenuOpen(false);
+
+    if (href === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
     }
+
+    const headerEl = document.querySelector('header');
+    const progressBarEl = document.querySelector('.fixed.top-0.left-0.right-0.h-1');
+    const headerH = (headerEl as HTMLElement)?.offsetHeight || 64;
+    const progressH = (progressBarEl as HTMLElement)?.offsetHeight || 1;
+    const offset = headerH + progressH + 1; // breathing space
+    const rect = element.getBoundingClientRect();
+    const target = window.scrollY + rect.top - offset;
+    window.scrollTo({ top: target < 0 ? 0 : target, behavior: 'smooth' });
   };
 
   return (

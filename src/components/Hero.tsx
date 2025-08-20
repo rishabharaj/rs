@@ -27,7 +27,7 @@ const Hero = () => {
   };
 
   return (
-  <section id="home" className="min-h-[90vh] flex flex-col pt-1">
+  <section id="home" className="flex flex-col overflow-hidden min-h-[calc(100vh-64px)] pt-4 md:pt-6">
       {/* Reduce vertical centering so total hero height (including tech strip) fits in first viewport */}
       <div className="flex-1 flex items-start md:items-center justify-center">
         <div className="container mx-auto px-6">
@@ -99,7 +99,8 @@ const Hero = () => {
                   {/* Dark radial background (mobile enlarged 1.3x) */}
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[330px] sm:h-[330px] md:w-[390px] md:h-[390px] lg:w-[450px] lg:h-[450px] rounded-full bg-gradient-to-b from-[#181b20] via-[#181b20] to-transparent z-0"></div>
                   {/* Outer Ring (mobile enlarged 1.3x) */}
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[325px] h-[325px] sm:w-[290px] sm:h-[290px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full border-[8px] md:border-[9px] lg:border-[10px] border-[#ff5a36] opacity-50 z-10 shadow-[0_0_60px_12px_rgba(255,90,54,0.28)]"></div>
+                  {/* Rotating glow ring: remove 'ring-rotate-glow', or add 'ring-glow-off', or add parent class 'no-ring-glow' to disable */}
+                  <div className="ring-rotate-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[325px] h-[325px] sm:w-[290px] sm:h-[290px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full border-[8px] md:border-[9px] lg:border-[10px] border-[#ff5a36] opacity-50 z-10 shadow-[0_0_60px_12px_rgba(255,90,54,0.28)]"></div>
                   {/* Inner Ring (mobile enlarged 1.3x) */}
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[255px] h-[255px] sm:w-[220px] sm:h-[220px] md:w-[265px] md:h-[265px] lg:w-[305px] lg:h-[305px] rounded-full border-[4px] md:border-[5px] border-[#ff5a36] opacity-40 z-10"></div>
                   {/* Profile Image (responsive) */}
@@ -120,8 +121,8 @@ const Hero = () => {
         </div>
       </div>
 
-  {/* Tech Strip - moved slightly upward from absolute bottom */}
-  <div className="w-full mt-2 md:mt-3 lg:mt-4">
+  {/* Tech Strip pinned to bottom (mt-auto) so entire hero (content + strip) fits inside exact viewport height */}
+  <div className="w-full mt-auto shrink-0">
         <div className="bg-[#0e1116]/90 backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.04),inset_0_-1px_0_rgba(0,0,0,0.35)]">
             <div className="max-w-6xl mx-auto px-6" style={{ height: '60px' }}>
             <ul className="flex items-center justify-between gap-8 overflow-x-auto py-4 text-[20px] sm:text-sm uppercase tracking-wide text-white/55">

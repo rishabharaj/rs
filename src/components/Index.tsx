@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -11,23 +11,8 @@ import Footer from '@/components/Footer';
 import Reveal from '@/components/ui/Reveal';
 
 const Index = () => {
-  // Hard reset scroll BEFORE paint to avoid a flash of scrolled position
-  useLayoutEffect(() => {
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
-  // Redundant safety resets after assets (fonts/images) load which can shift layout
-  useEffect(() => {
-    const forceTop = () => window.scrollTo(0, 0);
-    requestAnimationFrame(forceTop);
-    const t1 = setTimeout(forceTop, 60);
-    const t2 = setTimeout(forceTop, 300);
-    window.addEventListener('load', forceTop, { once: true });
-    return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, []);
+  // Ensure always start at top when page mounts (avoids browser restoring scroll)
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior }); }, []);
   return (
     <div className="min-h-screen bg-background">
       <Header />

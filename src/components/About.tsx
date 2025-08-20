@@ -32,7 +32,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-dark-surface">
+  <section id="about" className="py-20 bg-dark-surface min-h-[calc(100vh-64px)]">
       <div className="container mx-auto px-6">
         {/* Services */}
         <div className="grid lg:grid-cols-2 gap-16 items-start">
