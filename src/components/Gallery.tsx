@@ -8,6 +8,7 @@ import iloveHackathon from '../../images/gallary/iloveindoreWinning_photo.png';
 import diabloClub from '../../images/gallary/diablo club indore.jpg';
 import youthFest from '../../images/gallary/Youthfest.jpg';
 import kriyeta from '../../images/gallary/kriyeta4.jpeg';
+import devcraftIIT from '../../images/gallary/Devcraft_winners.jpg';
 import treasureInShell from '../../images/gallary/treasure in shell event (linux) coordinating volunteering.jpg';
 
 const Gallery = () => {
@@ -29,6 +30,13 @@ const Gallery = () => {
 
   const galleryImages = [
     // User-provided photos
+    {
+      id: 6,
+      src: devcraftIIT,
+      alt: "Winner at IIT (Devcraft hackathon)",
+      title: "IIT Indore Hackathon Winner",
+      description: "Devcraft — Winner at IIT Indore AUG-2025"
+    },
     {
       id: 101,
       src: chennaiPhoto,
@@ -66,7 +74,8 @@ const Gallery = () => {
     },
     
     {
-      id: 105,
+  // NOTE: previous duplicate id (105) changed to 106 to keep React keys unique
+  id: 106,
       src: kriyeta,
       alt: "Krityeta 4.0 certification img",
       title: "Kriyeta 4.0 at Acropolise ,Indore",
@@ -87,13 +96,6 @@ const Gallery = () => {
       title: "Team Projects",
       description: "Collaborative development work : coming soon"
     },
-    {
-      id: 6,
-      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop",
-      alt: "Project Presentation",
-      title: "Project Demo",
-      description: "Showcasing : coming soon"
-    }
   ];
 
   return (
