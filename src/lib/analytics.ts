@@ -3,8 +3,21 @@ import ReactGA from 'react-ga4';
 // Initialize Google Analytics
 export const initGA = () => {
   const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  
   if (measurementId) {
-    ReactGA.initialize(measurementId);
+    console.log('🚀 Initializing Google Analytics with ID:', measurementId);
+    
+    ReactGA.initialize(measurementId, {
+      testMode: false,
+      gaOptions: {
+        send_page_view: true,
+        debug_mode: import.meta.env.DEV // Enable debug mode in development
+      }
+    });
+    
+    console.log('✅ Google Analytics initialized successfully');
+  } else {
+    console.warn('⚠️ Google Analytics Measurement ID not found in environment variables');
   }
 };
 

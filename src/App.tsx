@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import ScrollProgress from "./components/ScrollProgress";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
-import { initGA } from "@/lib/analytics";
+import { initGA, trackPageView } from "@/lib/analytics";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +15,12 @@ const App = () => {
   // Initialize Google Analytics on app start
   useEffect(() => {
     initGA();
+    
+    // Track initial page view
+    if (window.location.pathname) {
+      console.log('📄 Tracking initial page view:', window.location.pathname);
+      trackPageView(window.location.pathname);
+    }
   }, []);
 
   return (
