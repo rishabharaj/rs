@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Mail, MapPin, Github, Linkedin, MessageSquare } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import Reveal from '@/components/ui/Reveal';
-import { trackFormSubmit, trackExternalLink } from '@/lib/analytics';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,20 +16,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Track form submission for analytics
-      trackFormSubmit('Contact Form');
-      
       const formDataToSend = new FormData();
       formDataToSend.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
       formDataToSend.append('name', formData.name);
       formDataToSend.append('email', formData.email);
       formDataToSend.append('message', formData.message);
-      formDataToSend.append('subject', `Portfolio Contact: ${formData.name}`);
-      formDataToSend.append('from_name', 'Rishabh Portfolio');
-      formDataToSend.append('replyto', formData.email);
-      // Add these to help avoid spam folder
-      formDataToSend.append('ccemail', ''); // Optional CC email
-      formDataToSend.append('redirect', window.location.origin + '/#contact');
+      formDataToSend.append('subject', `New Contact Form Message from ${formData.name}`);
+      formDataToSend.append('from_name', 'Portfolio Contact Form');
       
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -42,7 +34,7 @@ const Contact = () => {
       if (result.success) {
         toast({
           title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon! (Check spam folder if needed)",
+          description: "Thank you for your message. I'll get back to you soon!",
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
@@ -146,7 +138,6 @@ const Contact = () => {
                 href="https://github.com/rishabharaj" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                onClick={() => trackExternalLink('https://github.com/rishabharaj')}
                 className="p-3 bg-muted hover:bg-coral hover:text-white rounded-lg transition-all duration-300"
               >
                 <Github className="w-6 h-6" />
@@ -155,7 +146,6 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/rishabharaj-sharma-57a7a8256" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                onClick={() => trackExternalLink('https://www.linkedin.com/in/rishabharaj-sharma-57a7a8256')}
                 className="p-3 bg-muted hover:bg-coral hover:text-white rounded-lg transition-all duration-300"
               >
                 <Linkedin className="w-6 h-6" />
