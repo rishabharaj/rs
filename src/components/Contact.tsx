@@ -17,7 +17,8 @@ const Contact = () => {
 
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'f8647026-96bb-4618-90c7-58c169e53560';
+      formDataToSend.append('access_key', accessKey);
       formDataToSend.append('name', formData.name);
       formDataToSend.append('email', formData.email);
       formDataToSend.append('message', formData.message);
