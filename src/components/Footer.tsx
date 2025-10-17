@@ -1,5 +1,4 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
-import Reveal from '@/components/ui/Reveal';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +7,6 @@ const Footer = () => {
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <Reveal direction="up" y={16}>
           <div className="mb-6 md:mb-0">
             <p className="text-muted-foreground flex items-center gap-2">
               Designed with <Heart className="w-4 h-4 text-coral" fill="currentColor" /> by Rishabharaj Sharma
@@ -17,9 +15,7 @@ const Footer = () => {
               © {currentYear} All rights reserved.
             </p>
           </div>
-          </Reveal>
 
-          <Reveal direction="up" y={16} delay={80}>
           <div className="flex gap-6">
             <a 
               href="https://github.com/rishabharaj" 
@@ -47,7 +43,6 @@ const Footer = () => {
               <Mail size={24} />
             </a>
           </div>
-          </Reveal>
         </div>
       </div>
     </footer>
