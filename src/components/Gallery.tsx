@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Reveal from '@/components/ui/Reveal';
 // Local gallery images
+import SIHphoto from '../../images/gallary/SIH_winners.jpg';
 import chennaiPhoto from '../../images/gallary/Chennai photo.jpg';
 import duaaPhoto from '../../images/gallary/DUAA_PHOTO.jpg';
 import iloveHackathon from '../../images/gallary/iloveindoreWinning_photo.png';
@@ -30,6 +31,14 @@ const Gallery = () => {
 
   const galleryImages = [
     // User-provided photos
+    {
+      id: 5,
+      src: SIHphoto,
+      alt: "SIH 2025 Winners",
+      title: "SIH 2025 Winners",
+      description: "Smart India Hackathon 2025 — Winner DEC-2025 at MRIIS, Faridabad"
+    },
+
     {
       id: 6,
       src: devcraftIIT,
@@ -89,13 +98,6 @@ const Gallery = () => {
       description: "Freshers get together —-  NOV-2023"
     },
    
-    {
-      id: 5,
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=400&fit=crop",
-      alt: "Team Collaboration",
-      title: "Team Projects",
-      description: "Collaborative development work : coming soon"
-    },
   ];
 
   return (
