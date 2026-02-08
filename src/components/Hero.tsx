@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   const handleResumeClick = () => {
-    window.open('https://drive.google.com/file/d/1xQtnhpY7GMwpuEGRnAbI9oJC1w4dGy2c/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1QGXth64xMSEPkIQ4tc9a0wd3QZNB2k7V/view?usp=sharing', '_blank');
   };
 
   return (
