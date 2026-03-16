@@ -197,21 +197,21 @@ All colors MUST be HSL.
   
   /* Timeline styles */
   .timeline {
-    @apply relative pl-8;
+    @apply relative pl-10;
   }
   .timeline::before {
     content: '';
-    @apply absolute left-2 top-0 bottom-0 border-l-2 border-border;
+    @apply absolute left-3 top-0 bottom-0 w-px bg-gradient-to-b from-coral/60 via-border to-transparent;
   }
   .timeline-item {
-    @apply relative mb-16;
+    @apply relative mb-6;
   }
   .timeline-item:last-child {
     @apply mb-0;
   }
   .timeline-item::before {
     content: '';
-    @apply absolute -left-8 top-2 w-4 h-4 bg-coral rounded-full;
+    @apply absolute -left-7 top-4 w-3.5 h-3.5 bg-coral rounded-full ring-4 ring-coral/20;
   }
   
   /* Statistics cards */
@@ -267,4 +267,26 @@ All colors MUST be HSL.
   */
   .ring-rotate-glow.ring-glow-off::after { animation: none !important; opacity: 0 !important; }
   .no-ring-glow .ring-rotate-glow::after { animation: none; opacity: 0; }
+
+  /* Experience snake pipeline glow */
+  @keyframes snake-path-flow {
+    to {
+      stroke-dashoffset: -980;
+    }
+  }
+
+  .snake-path-track {
+    filter: drop-shadow(0 0 10px hsl(var(--coral) / 0.22));
+  }
+
+  .snake-path-outline {
+    filter: drop-shadow(0 0 8px hsl(var(--coral) / 0.45));
+  }
+
+  .snake-path-flow {
+    stroke-dasharray: 86 940;
+    stroke-dashoffset: 0;
+    animation: snake-path-flow 3.6s linear infinite;
+    filter: drop-shadow(0 0 10px hsl(var(--coral) / 0.95)) drop-shadow(0 0 20px hsl(var(--coral) / 0.6));
+  }
 }

@@ -13,7 +13,12 @@ import devcraftIIT from '../../images/gallary/Devcraft_winners.jpg';
 import treasureInShell from '../../images/gallary/treasure in shell event (linux) coordinating volunteering.jpg';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+  } | null>(null);
 
   // Lock scroll without shifting layout; keep modal always centered
   useEffect(() => {
@@ -110,32 +115,32 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
-            <Reveal key={image.id} direction="up" y={24}>
-            <div 
-              className="group relative overflow-hidden rounded-xl bg-gray-800 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-              onClick={() => setSelectedImage(image.src)}
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src={image.src} 
+        <div className="columns-2 gap-3 sm:columns-3 lg:columns-4 xl:columns-5">
+          {galleryImages.map((image, index) => (
+            <Reveal key={image.id} direction="up" y={16}>
+              <div
+                className="group relative mb-3 cursor-pointer overflow-hidden rounded-xl bg-gray-800 break-inside-avoid"
+                onClick={() => setSelectedImage({
+                  src: image.src,
+                  alt: image.alt,
+                  title: image.title,
+                  description: image.description,
+                })}
+              >
+                <img
+                  src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className={`w-full object-cover transition-transform duration-300 group-hover:scale-105 ${index % 3 === 0 ? 'aspect-[4/5]' : index % 3 === 1 ? 'aspect-[1/1]' : 'aspect-[5/4]'}`}
                 />
-              </div>
-              
-              {/* Overlay: always visible now (previously hidden until hover) */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white font-semibold text-lg mb-2">{image.title}</h3>
-                  <p className="text-gray-200 text-sm">{image.description}</p>
-                </div>
-              </div>
 
-              {/* Corner Accent: faint by default, brighten on hover */}
-              <div className="absolute top-4 right-4 w-3 h-3 bg-coral rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <h3 className="text-sm font-semibold text-white leading-tight">{image.title}</h3>
+                  </div>
+                </div>
+
+                <div className="absolute top-3 right-3 h-2.5 w-2.5 rounded-full bg-coral opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+              </div>
             </Reveal>
           ))}
         </div>
@@ -143,19 +148,25 @@ const Gallery = () => {
         {/* Modal */}
         {selectedImage && typeof document !== 'undefined' && createPortal(
           <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-5 sm:p-8 md:p-10 backdrop-blur-sm"
             onClick={() => setSelectedImage(null)}
           >
             <div
-              className="relative w-[820px] max-w-[92vw] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10 animate-in fade-in zoom-in duration-200"
+              className="relative w-[820px] max-w-[86vw] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl ring-1 ring-white/10 animate-in fade-in zoom-in duration-200"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={selectedImage}
-                alt="Gallery Image"
-                className="w-full h-full object-cover object-center select-none"
-                draggable={false}
-              />
+              <div className="aspect-[4/3]">
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="w-full h-full object-cover object-center select-none"
+                  draggable={false}
+                />
+              </div>
+              <div className="border-t border-white/10 bg-zinc-950/80 px-5 py-4">
+                <h3 className="text-base font-semibold text-white">{selectedImage.title}</h3>
+                <p className="mt-1 text-sm text-zinc-300">{selectedImage.description}</p>
+              </div>
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-3 right-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white text-xl leading-none backdrop-blur hover:bg-black/80 transition-colors"
@@ -163,7 +174,6 @@ const Gallery = () => {
               >
                 ×
               </button>
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
           </div>,
           document.body

@@ -50,11 +50,16 @@ const About = () => {
             </div>
 
             {/* Statistics */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="stat-card">
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="text-sm text-muted-foreground mt-2">{stat.label}</div>
+                <div
+                  key={index}
+                  className={`stat-card px-3 py-4 sm:px-6 sm:py-6 ${index === stats.length - 1 ? 'col-span-2 sm:col-span-1' : ''}`}
+                >
+                  <div className="stat-number text-2xl sm:text-3xl">{stat.number}</div>
+                  <div className="mt-2 break-words text-xs leading-snug text-muted-foreground sm:text-sm">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
