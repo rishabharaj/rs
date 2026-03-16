@@ -1,46 +1,90 @@
-## Rishabharaj Sharma — Developer Portfolio
+# 🚀 Rishabharaj Sharma Portfolio
 
-A fast, modern portfolio built with Vite + React + TypeScript + Tailwind CSS. It showcases projects, experience, certifications, a photo gallery, and smooth in‑view animations with a neon scroll progress bar.
+[![React](https://img.shields.io/badge/React-18-1f6feb?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-2f74c0?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-ff8c42?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-0f766e?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f2c94c?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Features
+**Rishabharaj Portfolio** is a modern developer portfolio focused on performance, clean UI, and polished interactions. It highlights projects, experience, certifications, skills, and gallery content in a responsive single-page experience.
 
-- Vite + React + TypeScript
-- Tailwind CSS with custom tokens and utilities
-- Smooth in‑view Reveal animations (IntersectionObserver)
-- Neon gradient top scroll progress bar
-- Hero with glowing concentric rings behind the profile image
-- Projects, Experience (timeline), Certifications, Skills, Gallery, Contact
-- Accessible, responsive, and keyboard friendly
+---
 
-## Getting started
+## 📸 Preview
 
-Prerequisites: Node.js 18+ (or 20+ recommended).
+![Portfolio Preview](./src/assets/websitepreview.png)
 
-Install dependencies and start the dev server:
+> **Live Demo:** Add your deployed link here (for example: Vercel, Netlify, or GitHub Pages)
+
+## Overview
+
+The portfolio is designed to be:
+
+- Fast and lightweight in development and production
+- Responsive across desktop, tablet, and mobile
+- Accessible and keyboard-friendly
+- Easy to customize and extend
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Radix UI primitives
+- Lucide React icons
+
+## Key Features
+
+- Section-based single-page portfolio layout
+- Reusable reveal animation component (`src/components/ui/Reveal.tsx`)
+- Animated top scroll progress indicator (`src/components/ScrollProgress.tsx`)
+- Dedicated pages/sections for:
+	- About
+	- Experience timeline
+	- Projects showcase
+	- Certifications
+	- Skills
+	- Gallery
+	- Contact
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (Node.js 20+ recommended)
+- npm
+
+### Installation
 
 ```bash
 npm install
+```
+
+### Run Development Server
+
+```bash
 npm run dev
 ```
 
-Build for production:
+### Production Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Scripts
+## Available Scripts
 
-- `npm run dev` — start Vite dev server
-- `npm run build` — production build
-- `npm run build:dev` — development-mode build
-- `npm run preview` — preview the production build locally
-- `npm run lint` — run ESLint
+- `npm run dev`: Start Vite development server
+- `npm run build`: Create production build
+- `npm run build:dev`: Create development-mode build
+- `npm run preview`: Preview production build locally
+- `npm run lint`: Run ESLint checks
 
-## Project structure
+## Project Structure
 
-```
+```text
 src/
 	components/
 		About.tsx
@@ -54,7 +98,8 @@ src/
 		Projects.tsx
 		ScrollProgress.tsx
 		Skills.tsx
-		ui/Reveal.tsx
+		ui/
+			Reveal.tsx
 	pages/
 		Index.tsx
 	assets/
@@ -63,37 +108,27 @@ src/
 public/
 ```
 
-## Styling
+## Styling and UI
 
-Tailwind is configured in `tailwind.config.ts`, with supporting styles in `src/index.css`. A reusable `.section-headline` utility adds a coral heading color and a subtle dark text shadow.
+Tailwind configuration is managed in `tailwind.config.ts` and global styles are defined in `src/index.css`.
 
-## Custom components
+The UI uses utility-first styling with reusable component patterns for consistent spacing, typography, and section visuals.
 
-- `ui/Reveal.tsx` — intersection‑observer based reveal with direction (up/down/left/right), delay, and reduced‑motion support.
-- `ScrollProgress.tsx` — animated neon scroll progress bar fixed at the top.
+## Deployment
 
-## Deploy
+The production output is generated in `dist/` and can be deployed to any static hosting provider (Netlify, Vercel, Cloudflare Pages, GitHub Pages, etc.).
 
-You can deploy the `dist/` folder to any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
-
-For GitHub Pages (classic flow):
+Example:
 
 ```bash
 npm run build
-# push the dist folder to the gh-pages branch using your preferred tool
 ```
-
-## Credits
-
-- Icons: lucide‑react
-- UI primitives: Radix UI
-- Animations/utilities: Tailwind CSS
 
 ## License
 
-Code is released under the MIT License – see the `LICENSE` file.
+Source code is licensed under the MIT License. See `LICENSE` for details.
 
-Personal media assets (all files under `images/` and `src/assets/` such as photos, certificates, and project screenshots) are NOT covered by the MIT license. Please replace them with your own when forking or deploying publicly. Keep attribution (link back or name credit) somewhere in the project if you reuse the code structure/design.
+Personal media assets (under `images/` and `src/assets/`, including photos, certificates, and screenshots) are not covered by the MIT License. Replace these assets with your own when forking or publishing.
 
 ---
 
