@@ -36,14 +36,22 @@ const Hero = () => {
             <Reveal direction="left" x={40} duration={1500}>
             <div className="space-y-5">
               <div className="space-y-4">
-                <h2 className="text-4xl lg:text-5xl font-bold text-foreground">Hello world<span className="text-coral">.</span></h2>
+                <h2 className="hero-hello text-4xl lg:text-5xl font-bold text-foreground">
+                  <span className="hero-typed-string" data-text='"Hello world."' aria-label='"Hello world."' />
+                </h2>
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-0.5 bg-coral"></div>
-                  <h3 className="text-4xl text-muted-foreground">I'm Rishabharaj</h3>
+                  <div className="hero-accent-line w-16 h-0.5 bg-coral"></div>
+                  <h3 className="hero-name text-4xl text-muted-foreground">I'm Rishabharaj</h3>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="hero-title text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Software Developer
                 </h1>
+                <div className="h-8 flex items-center gap-3">
+                  <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground/80">Currently</span>
+                  <span key={currentRole} className="hero-role-pill text-sm font-medium text-coral">
+                    {roles[currentRole]}
+                  </span>
+                </div>
               </div>
 
               {/* Action Buttons */}
