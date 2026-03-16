@@ -54,7 +54,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 w-full">
         <div className="flex items-center justify-between">
           <Reveal direction="down" y={16}>
-            <div className="text-xl font-bold text-foreground">
+            <div className="text-base sm:text-xl font-bold text-foreground truncate pr-3 max-w-[calc(100vw-5rem)] sm:max-w-none">
               Rishabharaj Sharma
             </div>
           </Reveal>

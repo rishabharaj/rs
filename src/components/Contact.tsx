@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, MapPin, Github, Linkedin, MessageSquare } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa';
 import { toast } from '@/hooks/use-toast';
 import Reveal from '@/components/ui/Reveal';
 
@@ -150,6 +151,14 @@ const Contact = () => {
                 className="p-3 bg-muted hover:bg-coral hover:text-white rounded-lg transition-all duration-300"
               >
                 <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="https://discord.com/users/rishabharaj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-muted hover:bg-coral hover:text-white rounded-lg transition-all duration-300"
+              >
+                <FaDiscord className="w-6 h-6" />
               </a>
             </div>
             </Reveal>

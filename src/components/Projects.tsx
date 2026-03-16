@@ -83,12 +83,12 @@ const Projects = () => {
                     ))}
                   </div>
                   
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-3">
                     <a 
                       href={project.demo} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="btn-coral flex items-center gap-2"
+                      className="btn-coral inline-flex items-center gap-2 whitespace-nowrap"
                     >
                       <ExternalLink size={16} />
                       <span>Live Demo</span>
@@ -97,7 +97,7 @@ const Projects = () => {
                       href={project.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="btn-outline flex items-center gap-2"
+                      className="btn-outline inline-flex items-center gap-2 whitespace-nowrap"
                     >
                       <Github size={16} />
                       <span>View Code</span>

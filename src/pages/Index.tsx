@@ -29,7 +29,7 @@ const Index = () => {
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-clip">
       <Header />
   <main className="pt-0">
   <Reveal y={32} direction="up"><Hero /></Reveal>

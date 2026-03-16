@@ -17,7 +17,7 @@ const ScrollProgress = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[100] h-1 bg-transparent">
+    <div className="pointer-events-none fixed top-0 left-0 right-0 z-[9999] h-1 bg-transparent" style={{ transform: 'translateZ(0)' }}>
       <div
         className="h-full progress-neon transition-[width] duration-75 ease-linear"
         style={{ width: `${progress}%` }}

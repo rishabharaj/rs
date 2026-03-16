@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa';
 import Reveal from '@/components/ui/Reveal';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
@@ -94,6 +95,15 @@ const Hero = () => {
               >
                 <Mail size={24} />
               </a>
+              <a
+                href="https://discord.com/users/rishabharaj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-coral transition-colors duration-300"
+                aria-label="Discord Profile"
+              >
+                <FaDiscord size={24} />
+              </a>
             </div>
             </div>
             </Reveal>
@@ -120,8 +130,8 @@ const Hero = () => {
                 </div>
 
                 {/* Side chevrons (hidden on very small screens to save space) */}
-                <div className="absolute -left-[30px] sm:-left-8 top-1/2 -translate-y-1/2 text-coral text-5xl sm:text-6xl font-bold opacity-30 sm:opacity-40 select-none pointer-events-none">&lt;</div>
-                <div className="absolute -right-[30px] sm:-right-8 top-1/2 -translate-y-1/2 text-coral text-5xl sm:text-6xl font-bold opacity-30 sm:opacity-40 select-none pointer-events-none">&gt;</div>
+                <div className="hidden sm:block absolute -left-[30px] sm:-left-8 top-1/2 -translate-y-1/2 text-coral text-5xl sm:text-6xl font-bold opacity-30 sm:opacity-40 select-none pointer-events-none">&lt;</div>
+                <div className="hidden sm:block absolute -right-[30px] sm:-right-8 top-1/2 -translate-y-1/2 text-coral text-5xl sm:text-6xl font-bold opacity-30 sm:opacity-40 select-none pointer-events-none">&gt;</div>
               </div>
             </div>
             </Reveal>
@@ -133,7 +143,7 @@ const Hero = () => {
   <div className="w-full mt-auto shrink-0">
         <div className="bg-[#0e1116]/90 backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.04),inset_0_-1px_0_rgba(0,0,0,0.35)]">
             <div className="max-w-6xl mx-auto px-6" style={{ height: '60px' }}>
-            <ul className="flex items-center justify-between gap-8 overflow-x-auto py-4 text-[20px] sm:text-sm uppercase tracking-wide text-white/55">
+            <ul className="flex items-center justify-between gap-4 sm:gap-8 overflow-x-auto py-4 text-xs sm:text-sm uppercase tracking-wide text-white/55 whitespace-nowrap">
               <li>HTML5</li>
               <li>CSS</li>
               <li>JavaScript</li>

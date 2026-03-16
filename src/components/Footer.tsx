@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,6 +42,15 @@ const Footer = () => {
               aria-label="Email Contact"
             >
               <Mail size={24} />
+            </a>
+            <a
+              href="https://discord.com/users/rishabharaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-coral transition-colors duration-300"
+              aria-label="Discord Profile"
+            >
+              <FaDiscord size={24} />
             </a>
           </div>
         </div>
