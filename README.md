@@ -1,4 +1,4 @@
-# 🚀 Rishabharaj Sharma Portfolio
+#  Rishabharaj Sharma Portfolio
 
 [![React](https://img.shields.io/badge/React-18-1f6feb?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-2f74c0?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -12,9 +12,9 @@
 
 ## 📸 Preview
 
-![Portfolio Preview](./src/assets/websitepreview.png)
+![Portfolio Preview](./public/websitepreview.png)
 
-> **Live Demo:** Add your deployed link here (for example: Vercel, Netlify, or GitHub Pages)
+> **Live Demo:** [Deployed link](https://www.rishabh.rocks)
 
 ## Overview
 
