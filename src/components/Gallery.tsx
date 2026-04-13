@@ -10,6 +10,7 @@ import diabloClub from '../../images/gallary/diablo club indore.jpg';
 import youthFest from '../../images/gallary/Youthfest.jpg';
 import kriyeta from '../../images/gallary/kriyeta4.jpeg';
 import devcraftIIT from '../../images/gallary/Devcraft_winners.jpg';
+import ihubG from '../../images/gallary/ihub.png';
 import treasureInShell from '../../images/gallary/treasure in shell event (linux) coordinating volunteering.jpg';
 
 const Gallery = () => {
@@ -101,6 +102,14 @@ const Gallery = () => {
       alt: "Freshers get together at Diablo Club, Indore (Nov 2023)",
       title: "Diablo Club Indore",
       description: "Freshers get together —-  NOV-2023"
+    },
+
+    {
+      id: 108,
+      src: ihubG,
+      alt: "IDE Bootcamp ihub visit, Gujarat (Apr 2026)",
+      title: "iHub Gujarat",
+      description: "iHub Gujarat IDE Bootcamp —-  Apr-2026"
     },
    
   ];
