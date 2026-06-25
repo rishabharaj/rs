@@ -1,7 +1,7 @@
 import { ExternalLink, Github } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 // Bundle project images
-import imgDrishti from '../../images/projects/Drishti.png';
+import imgCGPAHelper from '../../images/projects/cgpahelper.png';
 import imgAgentSync from '../../images/projects/Agentsync.png';
 import imgArchitectAI from '../../images/projects/ArchitectAI.png';
 
@@ -17,12 +17,12 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Cortex",
-      description: "Cortex : An AI-driven second brain that turns your scattered thoughts into connected insights",
-      tags: ["AI/ML", "Neural Networks", "Deep Learning", "Computer Vision"],
-  image: imgDrishti,
-      demo: "https://cortex-personal-ai-engine.vercel.app/",
-      github: "https://github.com/rishabharaj/Cortex-Personal-AI-Engine",
+      title: "CGPA Helper",
+      description: "A privacy-first CGPA/SGPA calculator and percentage converter supporting standard 10-point, 4.0, and 5.0 scales with real-time, credit-weighted computations.",
+      tags: ["Astro", "Tailwind CSS", "TypeScript", "React"],
+  image: imgCGPAHelper,
+      demo: "https://cgpahelper.com",
+      github: "https://github.com/rishabharaj/cgpa-helper",
       featured: true
     },
     {
